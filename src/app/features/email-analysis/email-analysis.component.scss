@@ -1,0 +1,207 @@
+body {
+  background: #10172a;
+  color: #f8fafc;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
+  background: rgba(30, 37, 59, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: box-shadow 0.3s;
+    }
+.card:hover {
+  box-shadow: 0 12px 40px 0 #00e6b8aa;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #00e6b8;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: #23272f;
+  color: #f8fafc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  &:focus {
+    outline: none;
+    border-color: #00e6b8;
+    box-shadow: 0 0 0 2px #00e6b888;
+  }
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s, box-shadow 0.2s, transform 0.2s;
+  &.btn-primary {
+    background: linear-gradient(90deg, #00e6b8 0%, #00b8d9 100%);
+    color: #10172a;
+    box-shadow: 0 0 8px #00e6b8aa;
+    &:hover {
+      box-shadow: 0 0 24px #00e6b8cc;
+      transform: translateY(-2px) scale(1.04);
+    }
+    &:disabled {
+      background: #334155;
+      color: #b0b8c1;
+      cursor: not-allowed;
+    }
+  }
+  &.btn-secondary {
+    background: #23272f;
+    color: #00e6b8;
+    border: 1px solid #00e6b8;
+    &:hover {
+      background: #00e6b8;
+      color: #10172a;
+    }
+    &:disabled {
+      background: #23272f;
+      color: #b0b8c1;
+      border-color: #334155;
+      cursor: not-allowed;
+    }
+  }
+  &.btn-outline-primary {
+    background: transparent;
+    color: #00e6b8;
+    border: 2px solid #00e6b8;
+    &:hover {
+      background: #00e6b8;
+      color: #10172a;
+      box-shadow: 0 0 16px #00e6b8cc;
+    }
+  }
+  &.btn-outline-secondary {
+    background: transparent;
+    color: #ffb300;
+    border: 2px solid #ffb300;
+    &:hover {
+      background: #ffb300;
+      color: #10172a;
+      box-shadow: 0 0 16px #ffb300cc;
+    }
+  }
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  animation: slideIn 0.5s;
+  &.alert-danger {
+    background: #ff4c51;
+    border-left: 6px solid #ffb300;
+    color: #fff;
+  }
+  &.alert-success {
+    background: #00e676;
+    border-left: 6px solid #00e6b8;
+    color: #10172a;
+  }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px);}
+  to { opacity: 1; transform: translateX(0);}
+}
+
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  .list-group-item {
+    padding: 1rem;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #23272f;
+    .badge {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      &.bg-danger {
+        background-color: #ff4c51;
+        color: white;
+      }
+      &.bg-success {
+        background-color: #00e676;
+        color: #10172a;
+      }
+    }
+  }
+}
+
+.progress {
+  background: #23272f;
+  border-radius: 8px;
+  height: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.progress-bar {
+  background: linear-gradient(90deg, #00e6b8 0%, #ffb300 100%);
+  box-shadow: 0 0 8px #00e6b8aa;
+  transition: width 0.5s;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #10172a;
+}
+
+.spinner-border {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid #00e6b8;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+}
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 0 8px #00e6b8);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { filter: drop-shadow(0 0 8px #00e6b8);}
+  50% { filter: drop-shadow(0 0 24px #00e6b8);}
+}
+
+.analysis-details-pre {
+  white-space: pre-wrap;
+  background: #181f2a;
+  color: #00e6b8;
+  border-radius: 8px;
+  padding: 1rem;
+} 
