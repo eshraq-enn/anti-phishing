@@ -1,0 +1,4 @@
+com\phishing\antiphishing\controller\EmailAnalysisControllerTest.class
+com\phishing\antiphishing\controller\AuthControllerTest.class
+com\phishing\antiphishing\controller\PublicControllerTest.class
+com\phishing\antiphishing\AntiPhishingApplicationTests.class
